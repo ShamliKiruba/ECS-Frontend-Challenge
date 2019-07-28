@@ -1,5 +1,5 @@
 {
-  "name": "ecs",
+  "name": "ecs frontend-challenge",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -12,13 +12,19 @@
     "vue": "^2.6.10"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.9.0",
-    "@vue/cli-plugin-eslint": "^3.9.0",
-    "@vue/cli-service": "^3.9.0",
+    "@vue/cli-plugin-babel": "^3.7.0",
+    "@vue/cli-plugin-eslint": "^3.7.0",
+    "@vue/cli-service": "^3.7.0",
+    "axios": "^0.18.0",
+    "json-server": "0.12.2",
     "babel-eslint": "^10.0.1",
+    "bulma": "^0.7.5",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
-    "vue-template-compiler": "^2.6.10"
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0",
+    "vue-router": "^3.0.6",
+    "vue-template-compiler": "^2.5.21"
   },
   "eslintConfig": {
     "root": true,

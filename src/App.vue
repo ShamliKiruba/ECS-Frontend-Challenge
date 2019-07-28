@@ -1,28 +1,37 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <BooksFilter/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import BooksFilter from './components/BooksFilter.vue'
+import WebStorage from './common/WebStorage.js'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    BooksFilter
+  },
+  created() {
+    WebStorage.setCollection('CART', []);
   }
 }
 </script>
 
 <style>
+@import './assets/bulma.min.css';
+
+html, body{
+  margin: 0;
+  height: 1500px;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  height: 100%;
 }
 </style>
