@@ -24,6 +24,7 @@
 import list from './list.vue';
 import Service from '../Service/Service.js';
 import WebStorage from '../common/WebStorage.js'
+import Constants from '../common/Constants.js'
 
 export default {
   name: 'HelloWorld',
@@ -75,6 +76,9 @@ export default {
   created() {
     Service.getBooksDetail().then(res => {
       WebStorage.setCollection('ALL_ITEMS', res.data);
+    })
+    .catch(err => {
+      WebStorage.setCollection('ALL_ITEMS', Constants.data);
     });
   },
   mounted() {

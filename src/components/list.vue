@@ -101,15 +101,16 @@ export default {
              return this.view == 'CART' ? 'DELETE FROM' : 'ADD TO';
         },
         sortedBooks:function() {
-            return this.books.sort((a,b) => {
+            let self = this;
+            return self.books.sort((a,b) => {
                 let n = 1;
-                if(this.sortOrder === 'desc') n = -1;
-                if(a[this.sort] < b[this.sort]) return -1 * n;
-                if(a[this.sort] > b[this.sort]) return 1 * n;
+                if(self.sortOrder === 'desc') n = -1;
+                if(a[self.sort] < b[self.sort]) return -1 * n;
+                if(a[self.sort] > b[self.sort]) return 1 * n;
                 return 0;
             }).filter((asd, index) => {
-                let initial = (this.page-1)*this.pageSize;
-                let final = this.page*this.pageSize;
+                let initial = (self.page-1)*self.pageSize;
+                let final = self.page*self.pageSize;
                 if(index >= initial && index < final) return true;
             });
         }

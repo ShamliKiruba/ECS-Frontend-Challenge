@@ -4,7 +4,7 @@ import Env from './Env';
 const CURRENT_ENV = Env.CURR_ENV;
 
 const BASE_URL = {
-    LOCAL: 'http://localhost:8007',
+    LOCAL: 'http://localhost:8009',
     PROD: 'http://starlord.hackerearth.com',
 };
 
