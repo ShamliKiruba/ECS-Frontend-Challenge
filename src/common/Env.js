@@ -1,3 +1,4 @@
 export default {
-    CURR_ENV: window.location.hostname === 'localhost' ? 'LOCAL' : 'PROD'
+    CURR_ENV: 'PROD'
+    // CURR_ENV: window.location.hostname === 'localhost' ? 'LOCAL' : 'PROD'
 };
